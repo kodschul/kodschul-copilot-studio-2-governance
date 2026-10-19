@@ -1,0 +1,30 @@
+{
+  "name": "copilot-studio-2-governance-slides",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fix:frontmatter": "bash scripts/fix-frontmatter.sh",
+    "dev:s00": "npm run fix:frontmatter && slidev s00/s00.md --open",
+    "dev:s01": "npm run fix:frontmatter && slidev s01/s01.md --open",
+    "dev:s02": "npm run fix:frontmatter && slidev s02/s02.md --open",
+    "dev:s03": "npm run fix:frontmatter && slidev s03/s03.md --open",
+    "dev:s04": "npm run fix:frontmatter && slidev s04/s04.md --open",
+    "dev:s05": "npm run fix:frontmatter && slidev s05/s05.md --open",
+    "dev:s06": "npm run fix:frontmatter && slidev s06/s06.md --open",
+    "build": "npm run build:s00 && npm run build:s01 && npm run build:s02 && npm run build:s03 && npm run build:s04 && npm run build:s05 && npm run build:s06",
+    "build:s00": "npm run fix:frontmatter && slidev build s00/s00.md --out .slides-build/s00",
+    "build:s01": "npm run fix:frontmatter && slidev build s01/s01.md --out .slides-build/s01",
+    "build:s02": "npm run fix:frontmatter && slidev build s02/s02.md --out .slides-build/s02",
+    "build:s03": "npm run fix:frontmatter && slidev build s03/s03.md --out .slides-build/s03",
+    "build:s04": "npm run fix:frontmatter && slidev build s04/s04.md --out .slides-build/s04",
+    "build:s05": "npm run fix:frontmatter && slidev build s05/s05.md --out .slides-build/s05",
+    "build:s06": "npm run fix:frontmatter && slidev build s06/s06.md --out .slides-build/s06",
+    "export": "npm run fix:frontmatter && slidev export s00/s00.md",
+    "export:pptx": "bash scripts/export-pptx.sh"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^51.7.1",
+    "@slidev/theme-default": "^0.25.0",
+    "playwright-chromium": "^1.63.0"
+  }
+}
